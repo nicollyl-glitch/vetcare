@@ -1,25 +1,9 @@
 @import './design-system.css';
 @import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.header{
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: var(--color-text-title);
-    border-bottom: 1 px solid var(--color-border);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    z-index: 1000;
-    backdrop-filter:blur(12px);
-
-}
 
 
 
@@ -43,8 +27,9 @@
 .section_vetcare{
     display: flex;
     height: 100vh;
-    width: 100%;
-    flex-direction: column;
+    width: 100vw;
+    flex-direction:column;
+    
 
     
 }
@@ -59,6 +44,7 @@
     background-color: var(--color-sidebar-bg);
     padding: 30px 20px;
     border-right:1px solid var(--color-border);
+    height: 100vh;
 }
 
 
@@ -72,26 +58,30 @@
     text-align:center;
     letter-spacing: 0.5px;
     justify-content: center;
-    width: 90%;
+   
 }
 
 
 
-.section_vetcare__text p{
+.section_vetcare__text{
     color: var(--color-primary);
-    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
-    width: 70%;
+    font-size: 20px;
+
 
 }
 
 
 
 .section_vetcare__menu{
+    
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 30%;
+    height: 100vh;
+    position: fixed;
     
 }
 
@@ -124,8 +114,9 @@
 }
 
 .section_vetcare__link:not(.section_vetcare_link--active):hover{
-    color: var(--color-text-title);
-    background-color: var(--color-sidebar-bg);
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    
 
 }
 
@@ -133,7 +124,7 @@
 
 .section_vetcare__content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     height: 100vh;
 }
@@ -153,7 +144,7 @@
 
 .brands__title h2{
 
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -173,6 +164,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    border: 1 px solid var(--color-border);
+    transition:  var(--transition);
+
 }
 
 .brand-card__img img{
@@ -190,9 +187,88 @@
     line-height: 1.6;
     max-width: 400px;
     height: 80px;
+    display: flex;
 }
 
 
+.card-image{
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    border: 1 px solid var(--color-border);
+    transition:  var(--transition);
+
+
+
+}
+
+
+.card-image :hover{
+    transform: translate(-6px);
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+.faq{
+
+    height: var(--section-height);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:  0 5%;
+    scroll-margin-top: var(--header-height);
+}
+
+
+.faq__title{
+
+    font-size: var(--fonbt-size-xl);
+    color: var(--color-primary);
+    margin-bottom: 25px;
+}
+
+
+.section_vetcare__faq-item{
+
+    background-color: var(--color-bg-card);
+    border: 1 px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 14px 20px;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+
+
+}
+.faq__item[open] {
+
+    border-color: var(--color-primary);
+}
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height);
+  background-color: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 1000;
+}
+
+.footer__section {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
 
 
 
