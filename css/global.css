@@ -44,14 +44,16 @@
     display: flex;
     height: 100vh;
     width: 100%;
+    flex-direction: column;
 
+    
 }
 
 
 
 .section_vetcare__sidebar{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     width: 260px;
     background-color: var(--color-sidebar-bg);
@@ -61,19 +63,27 @@
 
 
 
-.section_vetcare__title{
+.section_vetcare__title h2{
 
     color: var(--color-text-title);
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 35px;
-    text-align: center;
+    text-align:center;
     letter-spacing: 0.5px;
+    justify-content: center;
+    width: 90%;
 }
 
 
 
-.section_vetcare__text{}
+.section_vetcare__text p{
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    display: flex;
+    width: 70%;
+
+}
 
 
 
@@ -81,6 +91,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 30%;
+    
 }
 
 
@@ -121,7 +133,7 @@
 
 .section_vetcare__content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-grow: 1;
     height: 100vh;
 }
@@ -132,7 +144,7 @@
 }
 
 
-.brands__title{
+.brands__title {
 
     margin-bottom: 30px;
     color: var(--color-text-title);
@@ -152,10 +164,10 @@
 }
 
 .brand-card__img{
-
-    width: 100%;
+    
+    width: 50%;
     height: 400px;
-    background-color: var(--color-primary); 
+    
     border-radius: 0 40px 0 40px;
     display: flex;
     align-items: center;
@@ -163,8 +175,21 @@
     margin-bottom: 15px;
 }
 
+.brand-card__img img{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    
+}
+
+
+
+
 .brand-card__description{
     font-family: var(--font-main);
+    line-height: 1.6;
+    max-width: 400px;
+    height: 80px;
 }
 
 
