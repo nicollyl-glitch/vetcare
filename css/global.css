@@ -8,22 +8,6 @@
 
 
 
-.header__brand{
-    display: flex;
-    align-items: center;
-}
-
-
-
-
-.header__title{
-    font-size:3rem;
-    color: var(--color-primary);
-    font-weight: 700;
-}
-
-
-
 .section_vetcare{
     display: flex;
     height: 100vh;
@@ -81,8 +65,7 @@
     flex-direction: column;
     gap: 12px;
     height: 100vh;
-    position: fixed;
-    
+   
 }
 
 
@@ -116,6 +99,7 @@
 .section_vetcare__link:not(.section_vetcare_link--active):hover{
     color: var(--color-primary);
     background-color: var(--color-secondary);
+   
     
 
 }
